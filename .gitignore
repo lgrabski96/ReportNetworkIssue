@@ -2,4 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Shop/bin/Debug/net5.0
+/Shop/bin
+/Shop/.vs
+/Shop/obj
+/.vs
