@@ -8,3 +8,5 @@
 /.vs
 /HtmlRenderSample/obj
 /HtmlRenderSample/bin
+/ReportNetworkIssue/obj/Debug
+/ReportNetworkIssue/bin/Debug

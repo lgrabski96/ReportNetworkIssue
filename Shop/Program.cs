@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shop.Model;
+using System;
 
 namespace Shop
 {
