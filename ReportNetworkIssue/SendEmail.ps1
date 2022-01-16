@@ -7,7 +7,7 @@ try
     $outlook = New-Object -ComObject Outlook.Application
     $mail = $Outlook.CreateItem(0)
 
-    $mail.To = "piotrspikowski@gmail.com"
+    $mail.To = "marek.romanowicz@cpgemini.com"
     $mail.Subject = "Email sent via Outlook from PowerShell"
     $mail.Body = "Hello"
 

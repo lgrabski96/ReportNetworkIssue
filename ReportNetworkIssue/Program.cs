@@ -1,4 +1,6 @@
 ﻿using Microsoft.Office.Interop.Outlook;
+using System;
+using System.Threading;
 
 namespace ReportNetworkIssue
 {
@@ -13,9 +15,11 @@ namespace ReportNetworkIssue
                 MailItem mail = outlook.CreateItem(OlItemType.olMailItem) as MailItem;
                 mail.Subject = "Netwotk Issue";
                 mail.Body = "A problem has been detected";
-                mail.To = "piotrspikowski@gmail.com";
+                mail.To = "marek.romanowicz@capgemini.com";
                 // mail.Display();
                 mail.Send();
+                Console.WriteLine("Email was send to ithelpdeskglobal ");
+                Thread.Sleep(5000);
 
                 /*
                 // TODO: Optionally we can resolve addresses from Exchange Server if that one is used
@@ -38,6 +42,8 @@ namespace ReportNetworkIssue
                 // TODO: Check if we want to really exit!
                 // outlook.Quit();
             }
+
+            
         }
     }
 }
