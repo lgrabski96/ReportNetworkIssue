@@ -9,7 +9,7 @@ try
 
     $mail.To = "milosz.krysinski@capgemini.com"
     $mail.Subject = "Network Issue"
-    $mail.Body = "A network issue has been reported"
+    $mail.Body = "Hello. I had an issue with network connection. Please check the possible reason and help to solve it. Thank You."
 
     $mail.Send()
 
