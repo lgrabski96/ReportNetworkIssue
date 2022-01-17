@@ -7,9 +7,9 @@ try
     $outlook = New-Object -ComObject Outlook.Application
     $mail = $Outlook.CreateItem(0)
 
-    $mail.To = "marek.romanowicz@cpgemini.com"
-    $mail.Subject = "Email sent via Outlook from PowerShell"
-    $mail.Body = "Hello"
+    $mail.To = "milosz.krysinski@capgemini.com"
+    $mail.Subject = "Network Issue"
+    $mail.Body = "A network issue has been reported"
 
     $mail.Send()
 
