@@ -13,7 +13,7 @@ try
 
     $mail.Send()
 
-    [System.Windows.MessageBox]::Show('Message has been send')
+    [System.Windows.MessageBox]::Show('Email has been successfully sent')
 
     $outlook.Quit()
 
@@ -21,6 +21,8 @@ try
 }
 catch
 {
-    Write-Host "Unable to send an email. An error occurred:"
-    Write-Host $_
+    [System.Windows.MessageBox]::Show('Error: Unable to send an email')
+
+    #Write-Host "Unable to send an email. An error occurred:"
+    #Write-Host $_
 }
