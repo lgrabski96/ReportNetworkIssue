@@ -13,6 +13,8 @@ try
 
     $mail.Send()
 
+    [System.Windows.MessageBox]::Show('Message has been send')
+
     $outlook.Quit()
 
     # [System.Runtime.Interopservices.Marshal]::ReleaseComObject($outlook)
