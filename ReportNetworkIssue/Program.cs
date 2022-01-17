@@ -9,7 +9,7 @@ namespace ReportNetworkIssue
     {
         public static void Main()
         {
-            var outlook = new Application();
+            var outlook = new Microsoft.Office.Interop.Outlook.Application();
 
             string message = "Message Send";
 
@@ -17,15 +17,15 @@ namespace ReportNetworkIssue
             {
                 MailItem mail = outlook.CreateItem(OlItemType.olMailItem) as MailItem;
                 mail.Subject = "Netwotk Issue";
-                mail.Body = "A problem has been detected";
-                mail.To = "lukasz.grabski@capgemini.com";
+                mail.Body = "Hello. I had an issue with network connection. Please check the possible reason and help to solve it. Thank You.";
+                mail.To = "milosz.krysinski@capgemini.com@capgemini.com";
                 // mail.Display();
                 mail.Send();
 
                 MessageBox.Show(message);
 
-                Console.WriteLine("Email was send to ithelpdeskglobal ");
-                Thread.Sleep(5000);
+                //Console.WriteLine("Email was send to ithelpdeskglobal ");
+                //Thread.Sleep(5000);
 
 
                 /*

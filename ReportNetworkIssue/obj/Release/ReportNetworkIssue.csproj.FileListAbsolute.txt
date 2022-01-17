@@ -1,0 +1,7 @@
+C:\Users\lgrabski\source\repos\ReportNetworkIssue\ReportNetworkIssue\bin\Release\ReportNetworkIssue.exe.config
+C:\Users\lgrabski\source\repos\ReportNetworkIssue\ReportNetworkIssue\bin\Release\ReportNetworkIssue.exe
+C:\Users\lgrabski\source\repos\ReportNetworkIssue\ReportNetworkIssue\bin\Release\ReportNetworkIssue.pdb
+C:\Users\lgrabski\source\repos\ReportNetworkIssue\ReportNetworkIssue\obj\Release\ReportNetworkIssue.csproj.ResolveComReference.cache
+C:\Users\lgrabski\source\repos\ReportNetworkIssue\ReportNetworkIssue\obj\Release\ReportNetworkIssue.csproj.CoreCompileInputs.cache
+C:\Users\lgrabski\source\repos\ReportNetworkIssue\ReportNetworkIssue\obj\Release\ReportNetworkIssue.exe
+C:\Users\lgrabski\source\repos\ReportNetworkIssue\ReportNetworkIssue\obj\Release\ReportNetworkIssue.pdb
