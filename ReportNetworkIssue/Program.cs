@@ -18,7 +18,7 @@ namespace ReportNetworkIssue
                 MailItem mail = outlook.CreateItem(OlItemType.olMailItem) as MailItem;
                 mail.Subject = "Netwotk Issue";
                 mail.Body = "Hello. I had an issue with network connection. Please check the possible reason and help to solve it. Thank You.";
-                mail.To = "milosz.krysinski@capgemini.com@capgemini.com";
+                mail.To = "milosz.krysinski@capgemini.com";
                 // mail.Display();
                 mail.Send();
 
