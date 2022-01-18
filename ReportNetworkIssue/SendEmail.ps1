@@ -4,10 +4,11 @@
 
 try
 {
-    $env:computername | Out-File -FilePath c:\users\mromanow\info.txt
-    Get-Date | Format-Table | Out-File -Append -FilePath c:\users\mromanow\info.txt
-    Get-NetIPAddress | Format-Table | Out-File -Append -FilePath c:\users\mromanow\info.txt
-    Get-NetAdapter | Out-File -Append -FilePath c:\users\mromanow\info.txt
+    $DesktopPath = [System.Environment]::GetFolderPath("Desktop")
+    $env:computername | Out-File -FilePath $DesktopPath\NetworkandComputerdetails.txt
+    Get-Date | Format-Table -Property DisplayHint,Date,Day,DayOfWeek, Hour, Minute, Month| Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
+    Get-NetIPAddress | Format-Table | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
+    Get-NetAdapter | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
 
     $outlook = New-Object -ComObject Outlook.Application
     $mail = $Outlook.CreateItem(0)
@@ -16,15 +17,15 @@ try
     $mail.Subject = "Network Issue"
     $mail.Body = "Hello. I had an issue with network connection. Please check the possible reason and help to solve it. Thank You."
 
-    $attachment1 = "c:\users\mromanow\info.txt"
-    $att = new-object System.Net.Mail.Attachment($attachment1)
+    $attachment1 = "$DesktopPath\NetworkandComputerdetails.txt"
+    # $att = new-object System.Net.Mail.Attachment($attachment1)
     $mail.Attachments.add($attachment1)
 
     $mail.Send()
 
     [System.Windows.MessageBox]::Show('Email has been successfully sent')
 
-    $outlook.Quit()
+    # $outlook.Quit()
 
     # [System.Runtime.Interopservices.Marshal]::ReleaseComObject($outlook)
 }
