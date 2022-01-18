@@ -4,12 +4,21 @@
 
 try
 {
+    $env:computername | Out-File -FilePath c:\users\mromanow\info.txt
+    Get-Date | Format-Table | Out-File -Append -FilePath c:\users\mromanow\info.txt
+    Get-NetIPAddress | Format-Table | Out-File -Append -FilePath c:\users\mromanow\info.txt
+    Get-NetAdapter | Out-File -Append -FilePath c:\users\mromanow\info.txt
+
     $outlook = New-Object -ComObject Outlook.Application
     $mail = $Outlook.CreateItem(0)
 
-    $mail.To = "milosz.krysinski@capgemini.com"
+    $mail.To = "marek.romanowicz@capgemini.com"
     $mail.Subject = "Network Issue"
     $mail.Body = "Hello. I had an issue with network connection. Please check the possible reason and help to solve it. Thank You."
+
+    $attachment1 = "c:\users\mromanow\info.txt"
+    $att = new-object System.Net.Mail.Attachment($attachment1)
+    $mail.Attachments.add($attachment1)
 
     $mail.Send()
 
