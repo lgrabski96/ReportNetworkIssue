@@ -18,21 +18,16 @@ try
     $mail.Body = "Hello. I had an issue with network connection. Please check the possible reason and help to solve it. Thank You."
 
     $attachment1 = "$DesktopPath\NetworkandComputerdetails.txt"
-    # $att = new-object System.Net.Mail.Attachment($attachment1)
     $mail.Attachments.add($attachment1)
 
     $mail.Send()
 
     [System.Windows.MessageBox]::Show('Email has been successfully sent')
 
-    # $outlook.Quit()
-
-    # [System.Runtime.Interopservices.Marshal]::ReleaseComObject($outlook)
 }
 catch
 {
     [System.Windows.MessageBox]::Show('Error: Unable to send an email')
 
-    #Write-Host "Unable to send an email. An error occurred:"
-    #Write-Host $_
+   
 }
