@@ -2,7 +2,8 @@
 {
     $DesktopPath = [System.Environment]::GetFolderPath("Desktop")
     $env:computername | Out-File -FilePath $DesktopPath\NetworkandComputerdetails.txt
-    Get-Date | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
+    $date = Get-Date
+    $date | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
     Get-NetIPAddress | Format-Table | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
     Get-NetAdapter | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
 
@@ -11,7 +12,7 @@
 
     $mail.To = "marek.romanowicz@capgemini.com"
     $mail.Subject = "Network Issue"
-    $mail.Body = "Hello. I had an issue with network connection. Please check the possible reason and help to solve it. Thank You."
+    $mail.Body = "Hello. I had an issue with network connection that occured around $date. Please check the possible reason and help to solve it. Thank You."
 
     $attachment1 = "$DesktopPath\NetworkandComputerdetails.txt"
     $mail.Attachments.add($attachment1)
