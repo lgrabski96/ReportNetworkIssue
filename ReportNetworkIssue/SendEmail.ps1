@@ -2,7 +2,7 @@
 {
     $DesktopPath = [System.Environment]::GetFolderPath("Desktop")
     $env:computername | Out-File -FilePath $DesktopPath\NetworkandComputerdetails.txt
-    Get-Date | Format-Table -Property DisplayHint,Date,Day,DayOfWeek, Hour, Minute, Month| Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
+    Get-Date | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
     Get-NetIPAddress | Format-Table | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
     Get-NetAdapter | Out-File -Append -FilePath $DesktopPath\NetworkandComputerdetails.txt
 
