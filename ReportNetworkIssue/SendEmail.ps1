@@ -1,6 +1,4 @@
-﻿
-
-try
+﻿try
 {
     $DesktopPath = [System.Environment]::GetFolderPath("Desktop")
     $env:computername | Out-File -FilePath $DesktopPath\NetworkandComputerdetails.txt
