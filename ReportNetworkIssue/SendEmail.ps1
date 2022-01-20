@@ -17,7 +17,7 @@ try
     $mail.Subject = "Network Issue"
     $mail.Body = "Hello. I had an issue with network connection that occurred around $date. 
     Please check the possible reason and help to solve it. 
-    This email was generated automatically and contains an attachment file containing basic network connection and computer report.
+    This email was generated automatically and contains an attachment file with basic network connection and computer report.
     Thank You."
 
     $attachment1 = "$DesktopPath\NetworkandComputerdetails.txt"
