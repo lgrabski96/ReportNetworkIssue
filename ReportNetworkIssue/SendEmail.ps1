@@ -10,7 +10,7 @@
     $outlook = New-Object -ComObject Outlook.Application
     $mail = $Outlook.CreateItem(0)
 
-    $mail.To = "marek.romanowicz@capgemini.com"
+    $mail.To = "ithelp.global@capgemini.com"
     $mail.Subject = "Network Issue"
     $mail.Body = "Hello. I had an issue with network connection that occured around $date. Please check the possible reason and help to solve it. Thank You."
 
